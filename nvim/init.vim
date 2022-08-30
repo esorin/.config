@@ -64,6 +64,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'chengzeyi/fzf-preview.vim'
 
 
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 call plug#end()
 " You can revert the settings after the call like so:
 "   filetype indent off   " Disable file-type-specific indentation
@@ -207,3 +209,21 @@ nnoremap <silent> gv :vsplit<CR><C-]>
 
 nmap yu yiw
 nmap yj p
+
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'✹',
+                \ 'Staged'    :'✚',
+                \ 'Untracked' :'✭',
+                \ 'Renamed'   :'➜',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'✖',
+                \ 'Dirty'     :'✗',
+                \ 'Ignored'   :'☒',
+                \ 'Clean'     :'✔︎',
+                \ 'Unknown'   :'?',
+                \ }
+
+
+let g:NERDTreeGitStatusPorcelainVersion = 1
+
+
