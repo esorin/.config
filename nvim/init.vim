@@ -199,7 +199,11 @@ nmap <silent> <leader>aj :ALENext<cr>
 nmap <silent> <leader>ak :ALEPrevious<cr>
 
 nnoremap <silent> <C-f> :Files<CR>
-nnoremap <silent> <Leader>f :grep -rn . -e<CR>
+
+nnoremap <silent> <leader>f :vnew<cr>:r !grep -rnw --exclude="tags" . -e<space>
+nnoremap <silent> <leader>g :vnew<cr>:r !grep -rn --exclude="tags" . -e<space>
 
 nnoremap <silent> gv :vsplit<CR><C-]>
 
+nmap yu yiw
+nmap yj p
