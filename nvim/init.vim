@@ -66,6 +66,8 @@ Plug 'chengzeyi/fzf-preview.vim'
 
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+Plug 'vim-scripts/AutoComplPop'
+
 call plug#end()
 " You can revert the settings after the call like so:
 "   filetype indent off   " Disable file-type-specific indentation
@@ -226,4 +228,6 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 
 let g:NERDTreeGitStatusPorcelainVersion = 1
 
+set complete+=kspell
+set completeopt=menuone,longest
 
