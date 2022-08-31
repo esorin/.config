@@ -74,6 +74,14 @@ call plug#end()
 "   syntax off            " Disable syntax highlighting
 "
 
+set shell=/bin/bash
+set ruler
+set backspace=indent,eol,start
+set tags=./tags
+set hlsearch
+set colorcolumn=89
+set cursorline
+
 set splitright
 
 set nu     " Enable line numbers
@@ -224,10 +232,37 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Clean'     :'✔︎',
                 \ 'Unknown'   :'?',
                 \ }
-
+let g:NERDTreeWinSize=40
 
 let g:NERDTreeGitStatusPorcelainVersion = 1
 
 set complete+=kspell
 set completeopt=menuone,longest
+
+
+nnoremap 3 <C-w>H
+nnoremap 4 <C-w>L
+
+
+nnoremap 1 <C-w><left>
+nnoremap 2 <C-w><right>
+
+map <Leader>tk <C-w>t<C-w>K
+
+" Removes pipes | that act as seperators on splits
+set fillchars+=vert:\ 
+
+map <Leader>tt :vnew term://bash<CR>
+
+nnoremap 9 :vertical res +3<CR> " vertical increase pane by 2
+nnoremap 0 :vertical res -3<CR> " vertical decrease pane by 2
+
+" cut
+vnoremap <C-X> "+x
+
+"Select all
+nnoremap ac :%y<CR>
+nnoremap ad ggdG
+
+
 

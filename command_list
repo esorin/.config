@@ -1,0 +1,17 @@
+command mode:
+    :g/<word> - highlight word in current file
+    *         - got to next occurence
+    dd        - delete line
+    yy        - copy line
+    p         - paste
+    $         - go to end of line
+    ^/_       - got o start of line non-whitespace
+    0         - go to start of line whitespace
+    Shift-g   - go to end of file
+    gg        - ot to start of file
+    ac        - copy all file    
+    ad        - delete all file
+    p         - paste
+    
+
+
