@@ -265,4 +265,5 @@ nnoremap ac :%y<CR>
 nnoremap ad ggdG
 
 
+autocmd bufreadpre /root/.config/command_list setlocal winfixwidth
 

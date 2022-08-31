@@ -1,4 +1,4 @@
-command mode:
+normal mode:q
     :g/<word> - highlight word in current file
     *         - got to next occurence
     dd        - delete line
@@ -12,6 +12,6 @@ command mode:
     ac        - copy all file    
     ad        - delete all file
     p         - paste
-    
+    :qa       - exit vim and close buffer    
 
 
