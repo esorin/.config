@@ -3,7 +3,11 @@ normal mode:q
     *         - got to next occurence
     dd        - delete line
     yy        - copy line
+    y         - copy word in visual
+    d         - cut word in visual
     p         - paste
+    e         - go to end of word
+    b         - go to beginning of the word
     $         - go to end of line
     ^/_       - got o start of line non-whitespace
     0         - go to start of line whitespace
@@ -13,5 +17,7 @@ normal mode:q
     ad        - delete all file
     p         - paste
     :qa       - exit vim and close buffer    
-
+    zM        - fold all functions
+    zR        - unfold all functions
+    za        - fold/unfold cursor functions
 

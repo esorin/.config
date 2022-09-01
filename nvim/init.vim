@@ -144,7 +144,7 @@ let g:ctrlsf_auto_preview = 0
 " Use the smart case sensitivity search scheme
 let g:ctrlsf_case_sensitive = 'smart'
 " Normal mode, not compact mode
-let g:ctrlsf_default_view = 'normal'
+let g:ctrlsf_default_view_mode = 'normal'
 " Use absoulte search by default
 let g:ctrlsf_regex_pattern = 0
 " Position of the search window
@@ -154,7 +154,37 @@ let g:ctrlsf_winsize = '80'
 " Search from the current working directory
 let g:ctrlsf_default_root = 'cwd'
 
-" (Ctrl+F) Open search prompt (Normal Mode)
+let g:ctrlsf_parse_speed = 1000
+let g:ctrlsf_ignore_dir = ['tests', 'test']
+let g:ctrlsf_auto_close =
+        \ {
+            \ "normal" : 0,
+            \ "compact": 0
+        \ }
+let g:ctrlsf_compact_position = 'bottom_inside'
+
+let g:ctrlsf_mapping =
+            \ {
+                \ "open"    : "o",
+                \ "openb"   : "O",
+                \ "split"   : "<C-O>",
+                \ "vsplit"  : "<CR>",
+                \ "tab"     : "t",
+                \ "tabb"    : "T",
+                \ "popen"   : "p",
+                \ "popenf"  : "P",
+                \ "quit"    : "q",
+                \ "next"    : "<C-J>",
+                \ "prev"    : "<C-K>",
+                \ "nfile"   : "<C-N>",
+                \ "pfile"   : "<C-P>",
+                \ "pquit"   : "q",
+                \ "loclist" : "",
+                \ "chgmode" : "M",
+                \ "stop"    : "<C-C>",
+            \ }
+
+"(Ctrl+F) Open search prompt (Normal Mode)
 nmap <C-F>f <Plug>CtrlSFPrompt 
 " (Ctrl-F + f) Open search prompt with selection (Visual Mode)
 xmap <C-F>f <Plug>CtrlSFVwordPath
@@ -247,8 +277,6 @@ nnoremap 4 <C-w>L
 nnoremap 1 <C-w><left>
 nnoremap 2 <C-w><right>
 
-map <Leader>tk <C-w>t<C-w>K
-
 " Removes pipes | that act as seperators on splits
 set fillchars+=vert:\ 
 
@@ -256,6 +284,14 @@ map <Leader>tt :vnew term://bash<CR>
 
 nnoremap 9 :vertical res +3<CR> " vertical increase pane by 2
 nnoremap 0 :vertical res -3<CR> " vertical decrease pane by 2
+
+nnoremap 7 :res +3<CR> " vertical increase pane by 2
+nnoremap 8 :res -3<CR> " vertical increase pane by 2
+
+" Change 2 split windows from vert to horiz or horiz to vert
+map <Leader>th <C-w>t<C-w>H
+map <Leader>tk <C-w>t<C-w>K
+
 
 " cut
 vnoremap <C-X> "+x
