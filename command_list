@@ -1,6 +1,8 @@
 normal mode:q
-    :g/<word> - highlight word in current file
-    *         - got to next occurence
+    /<word>   - highlight word in current file
+    gd        - highlight word under cursor
+    n         - go to next occurence
+    N         - go to previous occurence
     dd        - delete line
     yy        - copy line
     y         - copy word in visual
