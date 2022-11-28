@@ -305,4 +305,5 @@ nnoremap ad ggdG
 
 
 autocmd bufreadpre /root/.config/command_list setlocal winfixwidth
+tnoremap <leader><Esc> <C-\><C-n>
 
