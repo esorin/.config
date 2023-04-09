@@ -1,3 +1,5 @@
+lua require('start')
+
 call plug#begin()
 " The default plugin directory will be as follows:
 "   - Vim (Linux/macOS): '~/.vim/plugged'
@@ -56,7 +58,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'blueyed/vim-diminactive'
 
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 
 Plug 'rking/ag.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -239,9 +241,9 @@ set updatetime=500
 "let g:tagbar_position = 'topleft vertical'
 
 " ALE Python fixers
-let g:ale_fixers = {'python': ['isort', 'black', 'remove_trailing_lines', 'trim_whitespace']}
-nmap <silent> <leader>aj :ALENext<cr>
-nmap <silent> <leader>ak :ALEPrevious<cr>
+" let g:ale_fixers = {'java': ['isort', 'black', 'remove_trailing_lines', 'trim_whitespace']}
+" nmap <silent> <leader>aj :ALENext<cr>
+" nmap <silent> <leader>ak :ALEPrevious<cr>
 
 nnoremap <silent> <C-f> :Files<CR>
 
